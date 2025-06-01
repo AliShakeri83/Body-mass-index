@@ -4,6 +4,7 @@ let weightVal = document.querySelector("#weight-val")
 let heightVal = document.querySelector("#height-val")
 let result = document.querySelector("#result")
 let category = document.querySelector("#category")
+let body = document.querySelector('body')
 
 
 function myfunc(event) {
@@ -19,18 +20,22 @@ function myfunc(event) {
     if (bmi<18.5) {
         category.innerHTML = 'Underweight'
         category.style.color = 'green'
+        body.style.background = 'green'
         result.style.color = 'green'
     } else if (18.5<=bmi && bmi<24.9) {
         category.innerHTML = 'Normal weight'
         category.style.color = 'black'
+        body.style.background = 'black'
         result.style.color = 'black'
     } else if (25<=bmi && bmi<29.9) {
         category.innerHTML = 'OverWeight'
         category.style.color = 'orange'
+        body.style.background = 'orange'
         result.style.color = 'orange'
     } else {
         category.innerHTML = 'Obese'
         category.style.color = 'red'
+        body.style.background = 'red'
         result.style.color = 'red'
     }
 }
